@@ -22,9 +22,19 @@ Tasks
          parse service response and provide custom message
            build custom message on fly based on incomming message
 
+Task Assignments:
+Siva - 1 & 3 - Shell plus tag attachment for body text
+Majeed - 4 - respond with string response (success/failure parsing)
+Andy - 2 Mail Service 
 
 Infrastructure Tasks
 Create Team Slack channel
 Unit Testing - create test cases for code per users
 create a shell call OR implement in individual project for final test
 
+
+Target Dates
+Week 9 -  First code review.
+Week 10 - Peer final code review.
+Week 11 - Unit Testing Done, code coverage review.
+Week 12 - Done Done!
