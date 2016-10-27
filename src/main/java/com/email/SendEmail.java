@@ -39,6 +39,7 @@ public String sendEmailMessage(Email email) {
     }catch (MessagingException mex) {
         mex.printStackTrace(new PrintWriter(sw));
         response = sw.toString();
+
     }
 
     return response;
