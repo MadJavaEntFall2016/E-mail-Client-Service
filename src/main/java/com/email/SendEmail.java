@@ -2,11 +2,8 @@ package com.email;
 
 import java.io.*;
 import java.util.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
 import javax.mail.*;
 import javax.mail.internet.*;
-import javax.activation.*;
 
 /**
  * Created by student on 10/22/16.
@@ -35,10 +32,9 @@ public String sendEmailMessage(Email email) {
 
         Transport.send(message);
 
-        response = "Sent message successfully....";
+        response = "Email was successfully sent";
     }catch (MessagingException mex) {
-        mex.printStackTrace(new PrintWriter(sw));
-        response = sw.toString();
+        response = mex.getMessage();
     }
 
     return response;
