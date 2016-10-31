@@ -1,7 +1,5 @@
 package com.email.webservice;
 
-import com.cdmr.entity.Customer;
-import com.cdmr.persistence.CustomerDao;
 import com.email.EmailService;
 import org.apache.log4j.Logger;
 
