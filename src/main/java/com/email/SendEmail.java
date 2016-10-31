@@ -10,36 +10,33 @@ import javax.mail.internet.*;
  */
 public class SendEmail {
 
-public String sendEmailMessage(Email email) {
+    public String sendEmailMessage(Email email) {
 
-    String response = " ";
-    String host = "localhost";
-    Properties properties = System.getProperties();
-    properties.setProperty("mail.smtp.host", host);
-    Session session = Session.getDefaultInstance(properties);
-    StringWriter sw = new StringWriter();
+        String response = " ";
+        String host = "localhost";
+        Properties properties = System.getProperties();
+        properties.setProperty("mail.smtp.host", host);
+        Session session = Session.getDefaultInstance(properties);
+        StringWriter sw = new StringWriter();
 
 
 
-    try {
+        try {
 
-        MimeMessage message = new MimeMessage(session);
+            MimeMessage message = new MimeMessage(session);
 
-        message.setFrom(new InternetAddress(email.getFromAddress()));
-        message.addRecipient(Message.RecipientType.TO, new InternetAddress(email.getTargetAddress()));
-        message.setSubject(email.getSubject());
-        message.setContent(email.getMessageBody(), "text/html");
+            message.setFrom(new InternetAddress(email.getFromAddress()));
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(email.getTargetAddress()));
+            message.setSubject(email.getSubject());
+            message.setContent(email.getMessageBody(), "text/html");
 
-        Transport.send(message);
+            Transport.send(message);
 
-        response = "Email was successfully sent";
-    }catch (MessagingException mex) {
-        mex.printStackTrace(new PrintWriter(sw));
-        response = sw.toString();
-        response = mex.getMessage();
+            response = "Email was successfully sent";
+        }catch (MessagingException mex) {
+            response = mex.getMessage();
+        }
 
+        return response;
     }
-
-    return response;
-}
 }
