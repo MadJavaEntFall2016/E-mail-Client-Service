@@ -11,6 +11,13 @@ public class Email {
 
     public Email() {}
 
+    public Email(String targetAddress, String fromAddress, String subject, String messageBody) {
+        this.targetAddress = targetAddress;
+        this.fromAddress = fromAddress;
+        this.subject = subject;
+        this.messageBody = messageBody;
+    }
+
     public String getTargetAddress(){
         return targetAddress;
     }
