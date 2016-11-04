@@ -43,11 +43,14 @@ public class EmailServiceResponse {
 
                 Response.status(204).entity(UNKNOWN_USER).build();
             }
-            default: throw new IllegalArgumentException(ILLEGAL_ARGUMENT_MESSAGE);
+            default: {
 
+                    responseType = responseType.substring(0,15);
+                    return Response.status(200).entity(responseType).build();
+                }
+            }
+                //throw  new IllegalArgumentException(ILLEGAL_ARGUMENT_MESSAGE);
         }
 
     }
 
-
-}
