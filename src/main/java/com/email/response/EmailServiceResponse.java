@@ -45,7 +45,7 @@ public class EmailServiceResponse {
             }
             default: {
 
-                    responseType = responseType.substring(0,15);
+                    responseType = responseType.substring(0,25);
                     return Response.status(200).entity(responseType).build();
                 }
             }

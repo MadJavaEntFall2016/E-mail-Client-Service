@@ -1,5 +1,7 @@
 package com.email;
 
+import com.email.response.EmailServiceResponse;
+
 import java.io.*;
 import java.util.*;
 import javax.mail.*;
@@ -32,7 +34,7 @@ public class SendEmail {
 
             Transport.send(message);
 
-            response = "Email was successfully sent";
+            response = EmailServiceResponse.SUCCESSFULLY_SENT;
         }catch (MessagingException mex) {
             response = mex.getMessage();
         }
