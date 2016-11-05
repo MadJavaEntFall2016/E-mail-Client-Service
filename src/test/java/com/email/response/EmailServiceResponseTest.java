@@ -25,11 +25,10 @@ public class EmailServiceResponseTest {
 
     @Test
     public void exceptionResponseTest() throws Exception {
-       /* Response response = EmailServiceResponse.response(new MessagingException(EXCEPTION_MESSAGE).getMessage());
-        String shortExceptionResponse = ((String) response.getEntity()).substring(0,25);
-
-        assertEquals("Response Exception not being returned", EXCEPTION_MESSAGE, shortExceptionResponse);
-        assertEquals("Response Status is incorrect", STATUS_CODE, response.getEntity());*/
+        Response response = EmailServiceResponse.response(new MessagingException(EXCEPTION_MESSAGE).getMessage());
+        String shortExceptionResponse = ((String) response.getEntity()).substring(0,50);
+        assertEquals("Response Exception not being returned", EXCEPTION_MESSAGE.substring(0,50), shortExceptionResponse);
+        assertEquals("Response Status is incorrect", STATUS_CODE, response.getStatus());
     }
 
 }
