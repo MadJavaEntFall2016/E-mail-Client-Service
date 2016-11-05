@@ -22,7 +22,8 @@ public class EmailServiceResponse {
      * @throws IllegalArgumentException if an appropriate response type is not provided
      */
     public static Response response(String responseType) throws IllegalArgumentException {
-        //TODO: return  responses for each case
+        if (responseType == null)
+            throw  new IllegalArgumentException(ILLEGAL_ARGUMENT_MESSAGE);
         switch (responseType){
             case SUCCESSFULLY_SENT: {
                 return Response.status(200).entity(SUCCESSFULLY_SENT).build();
@@ -45,11 +46,11 @@ public class EmailServiceResponse {
             }
             default: {
 
-                    responseType = responseType.substring(0,15);
+                    responseType = responseType.substring(0,50);
                     return Response.status(200).entity(responseType).build();
                 }
             }
-                //throw  new IllegalArgumentException(ILLEGAL_ARGUMENT_MESSAGE);
+
         }
 
     }

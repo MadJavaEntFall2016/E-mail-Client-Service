@@ -1,5 +1,6 @@
 package com.email;
 
+import com.email.response.EmailServiceResponse;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -8,7 +9,7 @@ import static org.junit.Assert.*;
  */
 public class SendEmailTest {
 
-    private final Email email = new Email("amills76@gmail.com", "DoNotReply@gmail.com", "Test Email", "This was a test of the email service");
+    private final Email email = new Email("realmej@hotmail.com", "realmajid@yahoo.com", "Test Email", "This was a test of the email service");
 
     @Test
     public void sendEmailTest() throws Exception {
@@ -16,7 +17,7 @@ public class SendEmailTest {
         SendEmail sendEmail = new SendEmail();
         String response = sendEmail.sendEmailMessage(email);
 
-        assertNull(response, response);
+        assertEquals(response, EmailServiceResponse.SUCCESSFULLY_SENT, response );
 
     }
 }

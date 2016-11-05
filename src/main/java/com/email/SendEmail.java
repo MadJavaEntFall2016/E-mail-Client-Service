@@ -1,5 +1,7 @@
 package com.email;
 
+import com.email.response.EmailServiceResponse;
+
 import java.io.*;
 import java.util.*;
 import javax.mail.*;
@@ -13,13 +15,29 @@ public class SendEmail {
     public String sendEmailMessage(Email email) {
 
         String response = " ";
-        String host = "localhost";
+
+       /*
         Properties properties = System.getProperties();
+        properties.put("mail.smtp.ssl.enable", true);
         properties.setProperty("mail.smtp.host", host);
-        Session session = Session.getDefaultInstance(properties);
+        properties.put("mail.smtp.port", "465");
+        properties.put("mail.smtp.auth", true);*/
+
+       //TODO Move these to properties file
+        String host = "smtp.gmail.com";
+        String username = "madjavaentfall16";
+        String pass = "MadJava11";
+
+        Properties properties = System.getProperties();
+        properties.put("mail.smtp.ssl.enable", true); // added this line
+        properties.put("mail.smtp.host", host);
+        properties.put("mail.smtp.user", username);
+        properties.put("mail.smtp.password", pass);
+        properties.put("mail.smtp.port", 465);
+        properties.put("mail.smtp.auth", true);
+
+        Session session = Session.getInstance(properties);
         StringWriter sw = new StringWriter();
-
-
 
         try {
 
@@ -27,12 +45,16 @@ public class SendEmail {
 
             message.setFrom(new InternetAddress(email.getFromAddress()));
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(email.getTargetAddress()));
+            message.addRecipient(Message.RecipientType.CC, new InternetAddress("amills76@gmail.com"));
+            message.addRecipient(Message.RecipientType.CC, new InternetAddress("siva.sajjala@gmail.com"));
             message.setSubject(email.getSubject());
             message.setContent(email.getMessageBody(), "text/html");
+            Transport transport = session.getTransport("smtp");
+            transport.connect(host, username, pass );
+            message.saveChanges();
+            transport.sendMessage(message, message.getAllRecipients());
 
-            Transport.send(message);
-
-            response = "Email was successfully sent";
+            response = EmailServiceResponse.SUCCESSFULLY_SENT;
         }catch (MessagingException mex) {
             response = mex.getMessage();
         }
