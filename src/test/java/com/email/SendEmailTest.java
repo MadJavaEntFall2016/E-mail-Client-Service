@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
  */
 public class SendEmailTest {
 
-    private final Email email = new Email("mejalmail@gmail.com", "realmajid@yahoo.com", "Test Email", "This was a test of the email service");
+    private final Email email = new Email("realmej@hotmail.com", "realmajid@yahoo.com", "Test Email", "This was a test of the email service");
 
     @Test
     public void sendEmailTest() throws Exception {
