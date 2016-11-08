@@ -30,7 +30,7 @@ public class EmailService {
 
         // get html content
         GenarateHtmlContent content = new GenarateHtmlContent();
-        String htmlContent = content.getHtmlBody(email.getMessageBody());
+        String htmlContent = content.getHtmlContent(email.getMessageBody());
 
         //set html email body
         email.setMessageBody(htmlContent);
