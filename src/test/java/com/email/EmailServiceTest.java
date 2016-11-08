@@ -25,7 +25,7 @@ public class EmailServiceTest {
     @Test
     public void sendMail() throws Exception {
         Response response = emailService.sendMail();
-        assertNotNull("unable to generate html content", Response);
+        assertNotNull("unable to send email", response);
     }
 
 }
