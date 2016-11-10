@@ -35,6 +35,7 @@ public class SendEmail {
         properties.put("mail.smtp.password", pass);
         properties.put("mail.smtp.port", 465);
         properties.put("mail.smtp.auth", true);
+        properties.put("mail.smtp.from", email.getFromAddress());
 
         Session session = Session.getInstance(properties);
         StringWriter sw = new StringWriter();
