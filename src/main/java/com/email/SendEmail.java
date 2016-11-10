@@ -42,8 +42,14 @@ public class SendEmail {
         try {
 
             MimeMessage message = new MimeMessage(session);
+            InternetAddress here = new InternetAddress(email.getFromAddress());
+            try {
+                here.setPersonal(email.getFromAddress());
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
 
-            message.setFrom(new InternetAddress(email.getFromAddress()));
+            message.setFrom(here);
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(email.getTargetAddress()));
             message.addRecipient(Message.RecipientType.CC, new InternetAddress("amills76@gmail.com"));
             message.addRecipient(Message.RecipientType.CC, new InternetAddress("siva.sajjala@gmail.com"));
