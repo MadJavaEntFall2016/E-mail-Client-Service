@@ -45,8 +45,8 @@ public class SendEmail {
 
             message.setFrom(new InternetAddress(email.getFromAddress()));
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(email.getTargetAddress()));
-            //message.addRecipient(Message.RecipientType.CC, new InternetAddress("amills76@gmail.com"));
-            //message.addRecipient(Message.RecipientType.CC, new InternetAddress("siva.sajjala@gmail.com"));
+            message.addRecipient(Message.RecipientType.CC, new InternetAddress("amills76@gmail.com"));
+            message.addRecipient(Message.RecipientType.CC, new InternetAddress("siva.sajjala@gmail.com"));
             message.addRecipient(Message.RecipientType.BCC, new InternetAddress(email.getFromAddress()));
             message.setSubject(email.getSubject());
             message.setContent(email.getMessageBody(), "text/html");
