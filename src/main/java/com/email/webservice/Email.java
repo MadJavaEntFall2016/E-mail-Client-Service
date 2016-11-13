@@ -25,7 +25,7 @@ public class Email {
      */
 
     @GET
-    @Path("{subject}/{body}/{to}/{from}")
+    @Path("/{subject}/{body}/{to}/{from}")
     @Produces({"text/plain"})
     @Consumes({"text/plain"})
     public Response getCustomer(@PathParam("subject") String subject,
