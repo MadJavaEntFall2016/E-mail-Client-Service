@@ -10,7 +10,7 @@ import java.util.Set;
  */
 
 //Defines the base URI for all resource URIs.
-@ApplicationPath("/restAPI")
+@ApplicationPath("restAPI")
 public class RestApplication extends Application {
     //The method returns a non-empty collection with classes, that must be included in the published JAX-RS application
     @Override
