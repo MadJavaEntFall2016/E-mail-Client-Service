@@ -16,6 +16,11 @@
     <tr><td ></td><td><textarea cols="30" rows="20" id="emailBody" name="emailBody" placeholder="Enter email body here" required></textarea></td></tr>
 </table>
 
+    <script type="text/javascript">
+        var contextPath='<%=request.getContextPath()%>';
+        console.log(contextPath);
+    </script>
+
     <p><input type="submit" name="submit" value="Send" />
         <input type="reset" name="reset" value="Clear Form" /></p>
 

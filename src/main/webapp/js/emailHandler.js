@@ -4,7 +4,12 @@
 
 $(document).ready(function (){
     $("form").bind("submit",function(e) {
-        var uri = "http://localhost:8080/restAPI/email/";
+        if (contextPath == null) {
+            var uri = "http://localhost:8080/restAPI/email/";
+        } else {
+            var uri = "http://localhost:8080/" + contextPath + "/restAPI/email/";
+        }
+        //var uri = "http://localhost:8080/restAPI/email/";
         var append = $("#subject").val() + "/" +   $("#emailBody").val() + "/" +   $("#recipient").val() + "/" +   $("#email").val() ;
         sendMail (uri ,append);
         e.preventDefault();
