@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -34,7 +35,8 @@ public class SendEmailServletTest {
         request.addParameter("email", "siva.kesava11@gmail.com");
         request.addParameter("emailBody", "email from local");
         servlet.doPost(request, response);
-        String message = (String) request.getAttribute("message");
+        HttpSession session = request.getSession();
+        String message = (String) session.getAttribute("message");
 
         assertEquals("email failed", message, "Email was successfully sent");
 

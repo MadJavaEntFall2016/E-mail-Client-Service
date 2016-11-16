@@ -8,3 +8,18 @@
 2016-11-16 08:58:03,928 0    [main] INFO  com.email.controller.SendEmailServlet  - inside send email servlet @ post
 2016-11-16 09:14:08,495 0    [main] INFO  com.email.controller.SendEmailServlet  - inside send email servlet @ post
 2016-11-16 09:17:11,301 0    [main] INFO  com.email.controller.SendEmailServlet  - inside send email servlet @ post
+2016-11-16 09:25:59,729 0    [main] INFO  com.email.controller.SendEmailServlet  - inside send email servlet @ post
+2016-11-16 09:25:59,734 5    [main] INFO  com.email.controller.SendEmailServlet  - to:siva.sajjala@gmail.com
+2016-11-16 09:25:59,734 5    [main] INFO  com.email.controller.SendEmailServlet  - sub:email from local
+2016-11-16 09:25:59,734 5    [main] INFO  com.email.controller.SendEmailServlet  - from:siva.kesava11@gmail.com
+2016-11-16 09:25:59,734 5    [main] INFO  com.email.controller.SendEmailServlet  - body:email from local
+2016-11-16 09:30:04,147 0    [main] INFO  com.email.controller.SendEmailServlet  - inside send email servlet @ post
+2016-11-16 09:30:07,966 3819 [main] INFO  com.email.controller.SendEmailServlet  - to:siva.sajjala@gmail.com
+2016-11-16 09:30:08,254 4107 [main] INFO  com.email.controller.SendEmailServlet  - sub:email from local
+2016-11-16 09:30:08,541 4394 [main] INFO  com.email.controller.SendEmailServlet  - from:siva.kesava11@gmail.com
+2016-11-16 09:30:08,968 4821 [main] INFO  com.email.controller.SendEmailServlet  - body:email from local
+2016-11-16 09:32:48,592 0    [main] INFO  com.email.controller.SendEmailServlet  - inside send email servlet @ post
+2016-11-16 09:32:52,021 3429 [main] INFO  com.email.controller.SendEmailServlet  - to:siva.sajjala@gmail.com
+2016-11-16 09:32:52,285 3693 [main] INFO  com.email.controller.SendEmailServlet  - sub:email from local
+2016-11-16 09:32:52,724 4132 [main] INFO  com.email.controller.SendEmailServlet  - from:siva.kesava11@gmail.com
+2016-11-16 09:32:54,093 5501 [main] INFO  com.email.controller.SendEmailServlet  - body:email from local
