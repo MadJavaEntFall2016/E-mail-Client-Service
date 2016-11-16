@@ -14,10 +14,10 @@ public class SendEmailTest {
     @Test
     public void sendEmailTest() throws Exception {
 
-        /*SendEmail sendEmail = new SendEmail();
+        SendEmail sendEmail = new SendEmail();
         String response = sendEmail.sendEmailMessage(email);
 
-        assertEquals(response, EmailServiceResponse.SUCCESSFULLY_SENT, response );*/
+        assertEquals(response, EmailServiceResponse.SUCCESSFULLY_SENT, response );
 
     }
 }
