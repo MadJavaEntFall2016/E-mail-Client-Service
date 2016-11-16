@@ -38,6 +38,7 @@ public class SendEmailServlet extends HttpServlet {
 
         String message = "";
         HttpSession session = request.getSession();
+        session.removeAttribute("message");
 
         EmailConsumer consumer = new EmailConsumer();
         try {
