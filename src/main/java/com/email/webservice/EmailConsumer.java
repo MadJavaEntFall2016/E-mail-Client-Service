@@ -33,9 +33,13 @@ public class EmailConsumer {
             e.printStackTrace();
         }
         Client client = ClientBuilder.newClient();
-        String queryString = sub + "/" + body + "/" + to + "/" + from;
-        String encoded = URLEncoder.encode(queryString, "UTF-8");
-        String url = properties.getProperty("emailSendURL") + encoded;
+        String queryString1 = URLEncoder.encode(sub, "UTF-8");
+        String queryString2 = URLEncoder.encode(body, "UTF-8");
+        String queryString3 = URLEncoder.encode(to, "UTF-8");
+        String queryString4 = URLEncoder.encode(from, "UTF-8");
+        String encodedURL = queryString1 + "/" + queryString2 + "/" + queryString3 + "/" + queryString4;
+
+        String url = properties.getProperty("emailSendURL") + encodedURL;
         //String url = properties.getProperty("emailSendURL")+ sub + "/" + body + "/" + to + "/" + from;
         WebTarget target =
                 client.target(url);
