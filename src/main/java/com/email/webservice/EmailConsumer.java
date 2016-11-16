@@ -32,8 +32,9 @@ public class EmailConsumer {
             e.printStackTrace();
         }
         Client client = ClientBuilder.newClient();
+        String url = properties.getProperty("emailSendURL")+ sub + "/" + body + "/" + to + "/" + from;
         WebTarget target =
-                client.target(properties.getProperty("emailSendURL") + sub + "/" + body + "/" + to + "/" + from);
+                client.target(url);
         String response = target.request(MediaType.TEXT_PLAIN).get(String.class);
         return response;
 
