@@ -5,3 +5,6 @@
 2016-11-16 07:15:35,610 0    [main] INFO  com.email.GenarateHtmlContentTest  - HTML content: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html xmlns="http://www.w3.org/1999/xhtml"> <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> </head><body><p>hellow this is siva</p></body></html> 
 2016-11-16 07:17:48,159 0    [main] INFO  com.email.GenarateHtmlContentTest  - HTML content: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html xmlns="http://www.w3.org/1999/xhtml"> <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> </head><body><p>hellow this is siva</p></body></html> 
 2016-11-16 07:53:55,903 0    [http-nio-8080-exec-5] INFO  com.email.controller.SendEmailServlet  - inside send email servlet @ post
+2016-11-16 08:58:03,928 0    [main] INFO  com.email.controller.SendEmailServlet  - inside send email servlet @ post
+2016-11-16 09:14:08,495 0    [main] INFO  com.email.controller.SendEmailServlet  - inside send email servlet @ post
+2016-11-16 09:17:11,301 0    [main] INFO  com.email.controller.SendEmailServlet  - inside send email servlet @ post

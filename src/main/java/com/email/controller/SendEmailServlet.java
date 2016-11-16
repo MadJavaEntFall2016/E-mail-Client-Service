@@ -36,6 +36,11 @@ public class SendEmailServlet extends HttpServlet {
         String from = request.getParameter("email");
         String body = request.getParameter("emailBody");
 
+        logger.info("to:" + to);
+        logger.info("sub:" + sub);
+        logger.info("from:" + from);
+        logger.info("body:" + body);
+
         String message = "";
         HttpSession session = request.getSession();
         session.removeAttribute("message");
