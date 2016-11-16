@@ -4,10 +4,10 @@
 
 $(document).ready(function (){
     $("form").bind("submit",function(e) {
-        if (contextPath == null) {
+        if (contextPath == null || contextPath == "") {
             var uri = "http://localhost:8080/restAPI/email/";
         } else {
-            var uri = "http://localhost:8080/" + contextPath + "/restAPI/email/";
+            var uri = "http://localhost:8080" + contextPath + "/restAPI/email/";
         }
         //var uri = "http://localhost:8080/restAPI/email/";
         var append = $("#subject").val() + "/" +   $("#emailBody").val() + "/" +   $("#recipient").val() + "/" +   $("#email").val() ;
