@@ -8,6 +8,7 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.util.Properties;
 
 /**
@@ -32,7 +33,9 @@ public class EmailConsumer {
             e.printStackTrace();
         }
         Client client = ClientBuilder.newClient();
-        String url = properties.getProperty("emailSendURL")+ sub + "/" + body + "/" + to + "/" + from;
+        String encoded = URLEncoder.encode(sub + "/" + body + "/" + to + "/" + from, "UTF-8");
+        String url = properties.getProperty("emailSendURL") + encoded;
+        //String url = properties.getProperty("emailSendURL")+ sub + "/" + body + "/" + to + "/" + from;
         WebTarget target =
                 client.target(url);
         String response = target.request(MediaType.TEXT_PLAIN).get(String.class);
