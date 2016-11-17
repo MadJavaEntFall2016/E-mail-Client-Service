@@ -34,3 +34,8 @@
 2016-11-16 10:02:24,139 2    [http-nio-8080-exec-9] INFO  com.email.controller.SendEmailServlet  - sub:test email
 2016-11-16 10:02:24,139 2    [http-nio-8080-exec-9] INFO  com.email.controller.SendEmailServlet  - from:siva.sajjala@gmail.com
 2016-11-16 10:02:24,139 2    [http-nio-8080-exec-9] INFO  com.email.controller.SendEmailServlet  - body:test email
+2016-11-16 10:52:57,079 0    [http-nio-8080-exec-3] INFO  com.email.controller.SendEmailServlet  - inside send email servlet @ post
+2016-11-16 10:52:57,081 2    [http-nio-8080-exec-3] INFO  com.email.controller.SendEmailServlet  - to:siva.kesava11@gmail.com
+2016-11-16 10:52:57,081 2    [http-nio-8080-exec-3] INFO  com.email.controller.SendEmailServlet  - sub:test from local
+2016-11-16 10:52:57,081 2    [http-nio-8080-exec-3] INFO  com.email.controller.SendEmailServlet  - from:siva.sajjala@gmail.com
+2016-11-16 10:52:57,081 2    [http-nio-8080-exec-3] INFO  com.email.controller.SendEmailServlet  - body:test from local
